@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transit</title>
+</head>
+<body>
+    <h1>Ticket System</h1>
+    Speed: <input type="number" name="txtsp" id="txtsp">
+    <input type="button" value="Check" onclick="checking()">
+    <div id="res"></div>
+    <script>
+        function checking(){
+            var txt = window.document.getElementById('txtsp')
+            var res = window.document.getElementById('res')
+            var t = Number(txt.value)
+            res.innerHTML = `<p>Your speed is ${t}.</p>`
+            if (t > 75) {
+                res.innerHTML += '<p>You got a ticket.</p>'
+            }
+            res.innerHTML += '<p>Drive using seat belt.</p>'
+    }
+    </script>
+</body>
+</html>

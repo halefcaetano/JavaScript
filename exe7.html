@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add numbers</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum</h1>
+    <input type="number" id="txtn1"> +
+    <input type="number" id="txtn2"> =
+    <input type="button" value="sum" onclick="sum()">
+    <div id="res">Result</div>
+    <script>
+        function sum() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var t1 = Number(tn1.value)
+            var t2 = Number(tn2.value)
+            var s = t1 + t2
+            res.innerHTML = `The sum betwwen ${t1} and ${t2} is <strong>${s}</strong>.`
+        }
+    </script>
+</body>
+</html>
